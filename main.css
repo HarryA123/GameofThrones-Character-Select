@@ -1,67 +1,88 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Marcellus SC', serif;
-  color: rgb(185, 172, 145);
+  color: #fff;
 }
 
 body{
-  background-color: #000;
   background-image: url(./img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-div#logo {
-  max-width: 300px;
-  margin: 1.6em auto;
-  padding: 20px;
+.logo{
+  width: 14rem;
+  margin: 1.5em auto;
 }
 
-#logo img{
+.logo img{
   width: 100%;
-  padding: 10px;  
+  vertical-align: middle;
 }
 
-#select_comment{
+#comment{
   text-align: center;
-  padding-bottom: 2rem;
+  color: rgb(225, 223, 220);
+  padding-bottom: 1rem;
 }
 
-.card_container{
+section{
+  margin: 0 auto;
+  max-width: 650px; 
+}
+
+.card-container{
+  min-width: 200px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 800px;
   justify-content: center;
-  margin: 0 auto;
-  align-content: center;
+  margin: 0 1rem;
 }
 
-.card_container .card{
-  min-width: 90px;
-  max-width: 90px;
-  height: 140px;
-  margin: 10px;
-  border: 2px solid rgb(57, 53, 53);
-  border-radius: 6px;
+.card-container .card{
+  width: 4em;
   overflow: hidden;
+  border: 2px solid rgb(72, 64, 26);
+  border-radius: 0.3em;
+  margin: 4px;
+  transform:skewX(-12deg);
   transition: .1s;
-  transform: skewX(-12deg);
   cursor: pointer;
 }
 
-.card_container .card:hover {
-  transform: scale(1.5) skewX(-12deg) rotateY(-360deg);
-  filter: brightness(2.5);
-  border: 2px solid rgb(121, 105, 19);
+.card-container .card:hover{
+  border: 2px solid rgba(255,207,38,1);
+  transform: scale(1.25) skewX(-12deg);
+  box-shadow: 0px 0px 15px #766431;
   z-index: 1;
 }
 
-.card_container .card img{
-  Width: 160%;
-  Height: auto;
-  filter: brightness(0.5) contrast(1.12) grayscale(0.31) saturate(1.23);
-  transform: translateX(-20px) translateY(-20px) skewX(12deg);
+.card-container .card img{
+  width: 115%;
+  height: 100%;
+  transform: translateX(-5px) skewX(12deg) scale(1.2);
+}
+
+#startBtn{
+  font-size: 20px;
+  display: block;
+  margin: .8rem auto;
+  width: 240px;
+  padding: 4px 20px;
+  border: 2px solid #6C570A;
+  border-radius: 2rem;
+  cursor: pointer;
+  background: rgb(255,207,38);
+  background: linear-gradient(180deg, rgba(255,207,38,1) 0%, rgba(84,72,29,1) 100%);
+}
+
+#startBtn:hover{
+  transform: scale(1.03);
+  box-shadow: 0px 0px 15px #6C570A;
+  background: rgb(255,207,38);
+  background: linear-gradient(180deg, rgba(255,207,38,1) 0%, rgba(84,72,29,1) 100%);
 }
 
